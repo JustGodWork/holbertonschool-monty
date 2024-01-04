@@ -9,7 +9,6 @@
  * Return: opcode of push
  *
  */
-
 void push(stack_t **stack, unsigned int line_number, int n)
 {
 	stack_t *new_node = malloc(sizeof(stack_t));
