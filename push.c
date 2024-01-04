@@ -4,24 +4,19 @@
  * push - Opcode for pushes to the stack
  * @stack: pointer
  * @line_number: number of lines
- * @n: integer
+ * @str: string
  *
  * Return: opcode of push
  *
  */
-void push(stack_t **stack, unsigned int line_number, int n)
+void push(stack_t **stack, unsigned int line_number, char *str)
 {
-	stack_t *new_node = malloc(sizeof(stack_t));
 
-	if (!new_node)
+	int value = atoi(str);
+
+	if (value == 0 || value < 0)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
+		printf("L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-
-	new_node->n = n;
-	new_node->prev = NULL;
-
-	new_node->next = (*stack);
-	(*stack) = new_node;
 }
