@@ -5,9 +5,7 @@
  * @stack: pointer
  * @line_number: number of lines
  * @n: integer
- *
  * Return: opcode of push
- *
  */
 void push(stack_t **stack, unsigned int line_number, int n)
 {
@@ -15,7 +13,7 @@ void push(stack_t **stack, unsigned int line_number, int n)
 
 	if (new_node == NULL)
 	{
-		fprintf(stderr, "L<line_number>: usage: push integer\n");
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
