@@ -3,9 +3,8 @@
 /**
  * pint - prints the value at the top of the stack
  * @stack: pointer
- * @counter: line index
- *
- * Return: opcode of pint
+ * @line_number: line index
+ * Return: void
  */
 void pint(stack_t **stack, unsigned int line_number)
 {
@@ -17,7 +16,7 @@ void pint(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
-	}
+	};
 
 	printf("%d\n", s->n);
 }

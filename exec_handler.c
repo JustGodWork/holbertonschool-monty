@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * get_handler - get the opcode
+ * exec_handler - get the opcode
  * @opcode: opcode
  * @stack: pointer to the stack
  * @line_number: line index
@@ -10,6 +10,7 @@
 int exec_handler(char *opcode, stack_t **stack, unsigned int line_number)
 {
 	instruction_t instructions[] = {
+		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
 		{"pop", pop},

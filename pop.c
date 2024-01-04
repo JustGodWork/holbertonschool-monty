@@ -4,8 +4,7 @@
  * pop - removes the top element of the stack
  * @stack: pointer
  * @line_number: line index
- *
- * Return: opcode of pop
+ * Return: void
  */
 void pop(stack_t **stack, unsigned int line_number)
 {
@@ -17,7 +16,7 @@ void pop(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
-	}
+	};
 
 	*stack = s->next;
 	free(s);

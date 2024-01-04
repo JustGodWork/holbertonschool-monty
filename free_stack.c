@@ -2,8 +2,7 @@
 
 /**
  * free_stack - free the stack
- * @stack: pointer
- *
+ * @head: pointer to the stack
  * Return: void
  */
 void free_stack(stack_t *head)

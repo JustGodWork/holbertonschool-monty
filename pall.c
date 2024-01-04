@@ -3,9 +3,8 @@
 /**
  * pall - prints the stack
  * @stack: pointer
- * @counter: no used
- *
- * Return: opcode of pall
+ * @line_number: no used
+ * Return: void
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
@@ -14,12 +13,10 @@ void pall(stack_t **stack, unsigned int line_number)
 
 	s = *stack;
 
-	if (s == NULL)
-		return;
-
-	while (s)
-	{
-		printf("%d\n", s->n);
-		s = s->next;
-	}
+	if (s)
+		while (s)
+		{
+			printf("%d\n", s->n);
+			s = s->next;
+		};
 }
