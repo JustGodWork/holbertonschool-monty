@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 #ifndef MONTY
 #define MONTY
+=======
+#ifndef MONTY_H
+#define MONTY_H
+>>>>>>> origin/elie
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -16,9 +21,15 @@
  */
 typedef struct stack_s
 {
+<<<<<<< HEAD
         int n;
         struct stack_s *prev;
         struct stack_s *next;
+=======
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
+>>>>>>> origin/elie
 } stack_t;
 
 /**
@@ -31,11 +42,17 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
+<<<<<<< HEAD
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 void push(unsigned int line_number, char *str);
 void pall(stack_t **head, unsigned int counter);
+=======
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
+} instruction_t;
+>>>>>>> origin/elie
 
 #endif

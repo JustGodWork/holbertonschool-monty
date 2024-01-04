@@ -8,7 +8,11 @@
  * Return: opcode of push
  *
  */
+<<<<<<< HEAD
 void push(unsigned int line_number, char *str)
+=======
+void push(stack_t **stack, unsigned int line_number, int n)
+>>>>>>> origin/elie
 {
 
 	int value = atoi(str);
