@@ -9,23 +9,19 @@
  * Return: opcode of push
  *
  */
-
 void push(stack_t **stack, unsigned int line_number, int n)
 {
 	stack_t *new_node = malloc(sizeof(stack_t));
 
-	if (new_node == NULL)
+	if (!new_node)
 	{
-		fprintf(stderr, "L<line_number>: usage: push integer\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 
 	new_node->n = n;
 	new_node->prev = NULL;
-	new_node->next = *stack;
 
-	if (*stack != NULL)
-		(*stack)->prev = new_node;
-
-	*stack = new_node;
+	new_node->next = (*stack);
+	(*stack) = new_node;
 }
