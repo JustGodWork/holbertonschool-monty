@@ -1,12 +1,5 @@
 #include "monty.h"
 
-void free_all(char *line, stack_t *stack, FILE *file)
-{
-	free(line);
-	free_stack(stack);
-	fclose(file);
-}
-
 /**
  * main - entry point
  * @argc: number of arguments

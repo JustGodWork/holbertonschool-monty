@@ -18,3 +18,17 @@ void free_stack(stack_t *head)
 		head = s;
 	};
 }
+
+/**
+ * free_all - free all the things
+ * @line: line
+ * @stack: stack
+ * @file: file
+ * Return: void
+ */
+void free_all(char *line, stack_t *stack, FILE *file)
+{
+	free(line);
+	free_stack(stack);
+	fclose(file);
+}

@@ -23,6 +23,7 @@ int check_digit(char *token)
 
 /**
  * push - Opcode for pushes to the stack
+ * @stack: pointer to the top of the stack
  * @line_number: number of lines
  * Return: void
  */
