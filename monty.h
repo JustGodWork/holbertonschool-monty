@@ -40,8 +40,12 @@ void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **head, unsigned int line_number);
 void pint(stack_t **head, unsigned int line_number);
 void pop(stack_t **head, unsigned int line_number);
+void swap(stack_t **head, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+void nop(stack_t **head, unsigned int line_number);
 
 int exec_handler(char *opcode, stack_t **stack, unsigned int line_number);
 void free_stack(stack_t *head);
+void free_all(char *line, stack_t *stack, FILE *file);
 
 #endif
