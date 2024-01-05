@@ -2,12 +2,12 @@
 
 /**
  * push - Opcode for pushes to the stack
- * @stack: pointer
  * @line_number: number of lines
  * Return: void
  */
 void push(stack_t **stack, unsigned int line_number)
 {
+
 	stack_t *new_node = malloc(sizeof(stack_t));
 
 	if (!new_node)
