@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#ifndef MONTY
-#define MONTY
-=======
 #ifndef MONTY_H
 #define MONTY_H
->>>>>>> origin/elie
-=======
-#ifndef MONTY_H
-#define MONTY_H
->>>>>>> d71498c37867666000c3298274a9b7bb571f1f0e
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -26,21 +16,9 @@
  */
 typedef struct stack_s
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
-=======
 	int n;
 	struct stack_s *prev;
 	struct stack_s *next;
->>>>>>> origin/elie
-=======
-	int n;
-	struct stack_s *prev;
-	struct stack_s *next;
->>>>>>> d71498c37867666000c3298274a9b7bb571f1f0e
 } stack_t;
 
 /**
@@ -53,20 +31,6 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
-} instruction_t;
-
-void push(unsigned int line_number, char *str);
-void pall(stack_t **head, unsigned int counter);
-=======
-	char *opcode;
-	void (*f)(stack_t **stack, unsigned int line_number);
-} instruction_t;
->>>>>>> origin/elie
-=======
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
@@ -78,6 +42,5 @@ void pop(stack_t **head, unsigned int line_number);
 
 int exec_handler(char *opcode, stack_t **stack, unsigned int line_number);
 void free_stack(stack_t *head);
->>>>>>> d71498c37867666000c3298274a9b7bb571f1f0e
 
 #endif
